@@ -31,7 +31,7 @@
                     <h3>Sign into your account</h3>
                     {% include 'includes/messages.html' %}
                     <form action="{% url 'login' %}" method="POST">
-                      {% csrf_token %}
+                        {% csrf_token %}
                         <div class="form-group form-box">
                             <input type="text" name="username" class="input-text" placeholder="Username" required>
                             <i class="flaticon-mail"></i>
@@ -47,7 +47,6 @@
                             <span>Or Login With</span>
                         </div>
                         <div class="clearfix"></div>
-
                     </form>
                     <p>Don't have an account? <a href="{% url 'register' %}" class="thembo"> Register here</a></p>
                 </div>

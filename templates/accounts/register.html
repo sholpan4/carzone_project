@@ -5,6 +5,7 @@
 {% load static %}
 {% load socialaccount %}
 {% providers_media_js %}
+
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
@@ -31,7 +32,7 @@
 
                     {% include 'includes/messages.html' %}
                     <form action="{% url 'register' %}" method="POST">
-                      {% csrf_token %}
+                        {% csrf_token %}
                         <div class="form-group form-box">
                             <input type="text" name="firstname" class="input-text" placeholder="First Name" required>
                             <i class="fa fa-user"></i>
@@ -63,7 +64,6 @@
                             <span>Or Login With</span>
                         </div>
                         <div class="clearfix"></div>
-
                     </form>
                     <p>Already a member? <a href="{% url 'login' %}" class="thembo"> Login here</a></p>
                 </div>
